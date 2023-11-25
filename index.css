@@ -5,40 +5,51 @@
     font-family: "Poppins", sans-serif;
 }
 /*header navigation bar*/
-header nav{
-    width: 100%;
-    background-color: #FFF;
-    margin: 0 auto;
-    padding: 5px;
-    text-align: center;
+nav{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-nav h2{
-    color: #633B31;
-    -webkit-text-stroke: 1px #EDCFB0;
-    font-size: 2rem;
-    margin: 0 65px;
-}
-nav ul{
-    display: flex;
-    list-style-type: none;
-    margin-right: 40px;
-}
-nav ul li a{
-    display: inline-block;
-    padding: 20px;
-    margin: 0 20px;
-    text-decoration: none;
-    color: #633B31;
-    font-size: 1.2rem;
-    font-weight: bold;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100px;
 }
 
-nav ul li a:hover{
-    text-decoration: underline;
+.logo{
+    color: #633B31;
+    -webkit-text-stroke: 1px #EDCFB0;
+    padding: 2rem 9%;
+    font-size: 35px;
 }
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #633B31;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    margin-right: 50px;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    /*background: #4a509b;*/
+    background-color: #633B31;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
 /*home screen*/
 section{
     padding: 2rem 9%;
@@ -170,6 +181,9 @@ main section#about_screen {
     margin-left: 20px;
     margin-top: 100px;
 }
+nav .fa-solid{
+    display: none;
+}
 
 
 @media screen and (max-width: 1200px){
@@ -178,33 +192,40 @@ main section#about_screen {
     }
 }
 @media screen and (max-width: 700px) {
-    header{
-        height: 24rem;
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        color: #FFFFFF;
     }
-    nav h2 {
-        position: absolute;
+    nav ul{
+        background: #633B31;
+        position: fixed;
         top: 0;
-        margin: 20px 20px;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2000;
     }
-
-    nav {
-        align-items: flex-start;
-
+    nav ul li{
+        display: block;
+        margin: 25px;
     }
-
-    nav ul {
-        flex-direction: column;
-        /*op de container niet op de item zelf*/
-        justify-content: flex-end;
-        align-items: flex-end;
+    nav ul li a{
+        color: #FFFFFF;
+    }
+    #menu-icon{
+        margin-right: 20px;
+        color: #633B31;
+    }
+    nav ul .fa-solid{
         position: absolute;
-        right: 0;
-        top: 3rem;
-        margin-right: 0;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
-
-    nav ul li a {
-        text-align: right;
+    nav ul li a::after{
+        background-color: #FFFFFF;
     }
     main section#home_screen {
         height: auto;

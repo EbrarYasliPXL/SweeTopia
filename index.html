@@ -5,19 +5,22 @@
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a4387275f8.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--navigation bar-->
 <header>
     <nav>
         <h2 class="logo">Sweetopia</h2>
-        <ul>
+        <ul id="sidemenu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" id="menu-icon" onclick="openmenu()"></i>
     </nav>
 </header>
 <main>
