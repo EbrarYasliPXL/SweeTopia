@@ -42,34 +42,31 @@ nav ul li a:hover{
 /*home screen*/
 section{
     padding: 2rem 9%;
+    height: 100vh;
 }
 main section#home_screen{
     background-image: url("assets/background_sweetopia.png");
-    height: 100vh;
     background-size: cover;
 }
-main section h1{
+main section#home_screen h1{
     color: #633B31;
     font-weight: bold;
     font-size: 98px;
     margin-top: 180px;
 }
-main section h2{
+main section#home_screen h2{
     color: #AD7946;
     font-weight: bold;
     font-size: 60px;
     margin-top: 1rem;
 
 }
-main section p{
+main section#home_screen p{
     color: #633B31;
     font-size: 26px;
     position: relative;
     width: 50%;
    margin-top: 1rem;
-}
-img{
-    display: none;
 }
 main section#home_screen .button{
     background-color: #633B31;
@@ -93,15 +90,86 @@ main section#home_screen .button:hover{
     background-color: #AD7946;
 }
 
-
 /*about screen*/
-main section#about_screen{
+main section#about_screen {
     background-color: #FFFFFF;
-    height: 100vh;
     background-size: cover;
 }
 
+.about-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
 
+.background-titel {
+    background-color: #F7EEE6;
+    width: 80%;
+    height: 127px;
+    border-radius: 54px;
+    margin: 30px 0;
+    z-index: 1;
+}
+
+.background-titel h1 {
+    z-index: 2;
+    text-align: center;
+    margin: 0;
+    color: #633B31;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 127px;
+}
+
+.background-titel h1 span {
+    color: #AD7946;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.text-container {
+
+}
+
+.about-text h2 {
+    color: #AD7946;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 2rem;
+}
+
+.about-text p {
+    color: #633B31;
+    margin-top: 20px;
+    font-size: 26px;
+    width: 70%;
+    text-align: left;
+}
+
+.about-kader {
+    background-color: #F7EEE6;
+    border: 2px solid #AD7946;
+    height: 450px;
+    width: 600px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 100px;
+}
 
 
 @media screen and (max-width: 1200px){
@@ -178,5 +246,38 @@ main section#about_screen{
         border-radius: 15px;
         top: 35px;
         margin-bottom: 5rem;
+    }
+    /*about screen*/
+    .background-titel {
+        width: 80%;
+        height: 50px;
+        border-radius: 25px;
+        margin: 15px 0;
+    }
+    .background-titel h1 {
+        font-size: 2rem;
+        line-height: 55px;
+    }
+    .about-text h2 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+    .about-text p {
+        margin-top: 5px;
+        font-size: 1rem;
+    }
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        width: 80%;
+    }
+
+    .about-kader {
+        width: 80%;
+        margin: 20px 0;
+        height: 225px;
     }
 }
