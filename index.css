@@ -15,8 +15,7 @@ nav{
 
 .logo{
     color: #633B31;
-    font-family: Arial, sans-serif;
-    -webkit-text-stroke: 1px #EDCFB0;
+    /*-webkit-text-stroke: 1px #EDCFB0;*/
     padding: 2rem 9%;
     font-size: 35px;
 }
@@ -56,31 +55,36 @@ section{
     padding: 2rem 9%;
     height: 100vh;
 }
-main section#home_screen{
+#home_screen{
     background-image: url("assets/background_sweetopia.png");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 250px;
+    padding-top: 50px;
 }
-main section#home_screen h1{
+#home_screen h1{
     color: #633B31;
     font-weight: bold;
     font-size: 98px;
-    margin-top: 180px;
 }
-main section#home_screen h2{
+#home_screen h2{
     color: #AD7946;
     font-weight: bold;
     font-size: 60px;
-    margin-top: 1rem;
-
 }
-main section#home_screen p{
+#home_screen p{
     color: #633B31;
     font-size: 26px;
     position: relative;
     width: 50%;
-   margin-top: 1rem;
 }
-main section#home_screen .button{
+#knoppen_home{
+    display: flex;
+    flex-direction: row;
+}
+#home_screen .button{
     background-color: #633B31;
     color: #FFFFFF;
     padding: 5px 10px;
@@ -91,17 +95,19 @@ main section#home_screen .button{
     border: none;
     font-size: 16px;
     margin-right: 10px;
-    z-index: 2;
-    margin-top: 1rem;
+    margin-top: 20px;
 }
-main section#home_screen .button a{
+#home_screen .button a{
     text-decoration: none;
     color: white;
 }
-main section#home_screen .button:hover{
+#home_screen .button:hover{
     background-color: #AD7946;
 }
 
+nav .fa-solid{
+    display: none;
+}
 /*about screen*/
 main section#about_screen {
     background-color: #FFFFFF;
@@ -115,6 +121,7 @@ main section#about_screen {
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    height: 100vh;
 }
 
 .background-titel {
@@ -136,62 +143,57 @@ main section#about_screen {
     line-height: 127px;
 }
 
-.background-titel h1 span {
+h1 span {
     color: #AD7946;
 }
-
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
+/*our products pagina*/
+#product-titel{
+    background-color: #FFFFFF;
+    width: 80%;
+    height: 127px;
+    border-radius: 54px;
+    margin: 30px 0;
+    z-index: 1;
 }
-
-.about-text {
+#product-titel h1{
+    z-index: 2;
+    text-align: center;
+    margin: 0;
+    color: #633B31;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 127px;
+}
+#product-screen{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 60%;
-}
-
-.text-container {
-
-}
-
-.about-text h2 {
-    color: #AD7946;
-    font-weight: bold;
-    font-size: 50px;
-    margin-top: 2rem;
-}
-
-.about-text p {
-    color: #633B31;
-    margin-top: 20px;
-    font-size: 26px;
-    width: 70%;
-    text-align: left;
-}
-
-.about-kader {
     background-color: #F7EEE6;
-    border: 2px solid #AD7946;
-    height: 450px;
-    width: 600px;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 100px;
-}
-nav .fa-solid{
-    display: none;
+    align-items: center;
 }
 
 
-
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1070px){
     nav, header{
         width: 100%;
     }
+    nav ul li{
+        margin: 10px 0;
+    }
+
+    nav ul li a{
+        margin-right: 10px;
+    }
+    #home_screen h1{
+        font-size: 64px;
+    }
+    #home_screen h2{
+        font-size: 40px;
+    }
+    #home_screen p{
+        font-size: 23px;
+        width: 100%;
+    }
+
 }
 @media screen and (max-width: 700px) {
     nav .fa-solid{
@@ -271,36 +273,5 @@ nav .fa-solid{
         margin-bottom: 5rem;
     }
     /*about screen*/
-    .background-titel {
-        width: 80%;
-        height: 50px;
-        border-radius: 25px;
-        margin: 15px 0;
-    }
-    .background-titel h1 {
-        font-size: 2rem;
-        line-height: 55px;
-    }
-    .about-text h2 {
-        margin-top: 10px;
-        font-size: 1.5rem;
-    }
-    .about-text p {
-        margin-top: 5px;
-        font-size: 1rem;
-    }
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .about-text {
-        width: 80%;
-    }
-
-    .about-kader {
-        width: 80%;
-        margin: 20px 0;
-        height: 225px;
-    }
 }
