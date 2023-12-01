@@ -7,6 +7,15 @@
 html {
     scroll-behavior: smooth;
 }
+/*custom scrolbar*/
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: #FFFFFF;
+}
+html::-webkit-scrollbar-thumb{
+    border-radius: 5rem;
+    background: #633B31;
+}
 /*header navigation bar*/
 nav{
     display: flex;
@@ -135,10 +144,11 @@ nav .fa-solid{
     padding-bottom: 3rem;
 }
 .about .row .foto-container{
-    flex:  1 1 40rem;
+    /*flex:  1 1 40rem;*/
     position: relative;
 }
 .about .row .foto-container img{
+    width: 650px;
     max-width: 100%;
     height: 100%;
     border: .1rem solid #633B31;
@@ -214,16 +224,6 @@ nav .fa-solid{
     position: relative;
     background-color: #FFFFFF;
 }
-.products .box-container .box .discount{
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    padding: .7rem 1rem;
-    font-size: 2rem;
-    color: #633B31;
-    z-index: 1;
-    border-radius: .5rem;
-}
 .products .box-container .box .image{
     position: relative;
     text-align: center;
@@ -231,13 +231,13 @@ nav .fa-solid{
     overflow: hidden;
 }
 .products .box-container .box .image img{
-    height: 25rem;
+    height: 20rem;
 }
 .products .box-container .box:hover .image img{
     transform: scale(1.1);
 }
 .products .box-container .box .content h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #633B31;
 }
 .products .box-container .box .content{
@@ -245,16 +245,18 @@ nav .fa-solid{
     padding: 2rem;
 }
 .products .box-container .box .content .price{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #AD7946;
-    font-weight: bold;
-    padding-top: 1rem;
 }
 .products .box-container .box .content .price span{
     font-size: 1.5rem;
     color: #999;
     font-weight: lighter;
     text-decoration: line-through;
+}
+.products .content p{
+    color: #633B31;
+    font-size: 1rem;
 }
 /*contact pagina*/
 .heading-contact{
@@ -336,6 +338,10 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 
+}
+.contact-left h2{
+    font-size: 60px;
+    color: #633B31;
 }
 /*footer*/
 footer{
@@ -513,6 +519,9 @@ footer a{
     }
     .contact-right{
         padding: 20px;
+    }
+    .contact-left h2{
+        font-size: 1.8rem;
     }
 
 }
