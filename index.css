@@ -523,5 +523,12 @@ footer a{
     .contact-left h2{
         font-size: 1.8rem;
     }
+    .logo{
+        color: #633B31;
+        -webkit-text-stroke: 1px transparent;
+        font-family: 'Arial', sans-serif;
+        padding: 2rem 9%;
+        font-size: 35px;
+    }
 
 }
