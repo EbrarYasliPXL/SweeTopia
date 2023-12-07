@@ -259,7 +259,7 @@ nav .fa-solid{
     font-size: 1rem;
 }
 /*contact pagina*/
-.heading-contact{
+.heading-contact{;
     text-align: center;
     font-size: 4rem;
     color: #AD7946;
@@ -401,6 +401,7 @@ footer a{
         height: 100vh;
         padding-top: 50px;
         z-index: 2000;
+        transition: right 0.5s;
     }
     nav ul li{
         display: block;
@@ -469,6 +470,8 @@ footer a{
     /*about screen*/
     .heading-about{
         font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
     }
     .about .row .content-about h3{
         font-size: 2rem;
